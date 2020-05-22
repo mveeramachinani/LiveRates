@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  api_basepath: 'http://%use_production_url%/'
 };
