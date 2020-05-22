@@ -41,9 +41,7 @@ namespace LiveRates.DataStorage
             {
                 if (response != null && response.Content != null && response.StatusCode == HttpStatusCode.OK)
                 {
-                    //var content = await response.Content.ReadAsStringAsync();
-
-                    var content = "[{ 'currency':'EUR/USD','rate':'1.08989','bid':'1.08989','ask':'1.08998','high':'1.09533','low':'1.08851','open':'1.09492','close':'1.08989','timestamp':'1590176574673'},{ 'currency':'GBP/USD','rate':'1.21715','bid':'1.21715','ask':'1.21731','high':'1.22331','low':'1.2161','open':'1.22219','close':'1.21715','timestamp':'1590176564766'},{ 'currency':'GBP/HUF','rate':'390.77','bid':'390.77','ask':'391.32','high':'392.18','low':'388.09','open':'388.35','close':'390.77','timestamp':'1590176577432'}]";
+                    var content = await response.Content.ReadAsStringAsync();
 
                     if (response.IsSuccessStatusCode == false)
                     {
