@@ -21,5 +21,8 @@ I containerized .NET core microservice by using Docker images that come pre-buil
 
 https://docs.microsoft.com/en-us/dotnet/core/docker/build-container?tabs=windows
 
+One thing i couldn't get right is how to get .NET Core microservice to run on the same port everytime. I struggled to get it right. So one thing that should be changed in the front end angular app is change the URL pointing to .NET Core microservice in market-changes component and singal-r service files.
+
+
 
 
