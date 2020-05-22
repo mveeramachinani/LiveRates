@@ -1,0 +1,115 @@
+.toolbar {
+    background-color: #b20000;
+  }
+  
+  mat-toolbar.toolbar h3 {
+    color: white;
+    font-size: x-large;
+  }
+  
+  .rates-table {
+    flex: 1 1 auto;
+    border-bottom: 1px solid rgba(0, 0, 0, .12);
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+  
+    .mat-header-row {
+      min-height: 64px;
+    }
+  
+    .mat-footer-row {
+      min-height: 64px;
+    }
+  
+    .rates {
+      position: relative;
+      cursor: pointer;
+      height: 84px;
+    }
+  
+    .mat-header-cell {
+      font-weight: 800;
+      font-size: medium;
+      color: black;
+    }
+  
+    .mat-footer-cell {
+      font-weight: 800;
+      font-size: medium;
+      color: black;
+    }
+  
+    .mat-cell {
+      min-width: 0;
+      display: flex;
+      align-items: center;
+  
+      .submit-button {
+        background-color: #5DB858;
+        color: white;
+      }
+    }
+  
+    .mat-row:nth-child(odd) {
+      background: #F1F1F1;
+      height: 60px;
+    }
+  
+    .mat-row:nth-child(even) {
+      height: 60px;
+    }
+  
+    .mat-column-id {
+      flex: 0 1 84px;
+    }
+  
+    .mat-column-image {
+      flex: 0 1 84px;
+  
+      .product-image {
+        width: 52px;
+        height: 52px;
+        border: 1px solid rgba(0, 0, 0, .12);
+      }
+    }
+  
+    .mat-column-buttons {
+      flex: 0 1 80px;
+    }
+  
+    .quantity-indicator {
+      display: inline-block;
+      vertical-align: middle;
+      width: 8px;
+      height: 8px;
+      border-radius: 4px;
+      margin-right: 8px;
+  
+      & + span {
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+  
+    .active-icon {
+      border-radius: 50%;
+    }
+  }
+  
+  .main-div {
+    height: 100vh;
+    display: 1 1 auto;
+    justify-content: center;
+    align-items: center;
+  
+    .example-card {
+      max-width: 1200px;
+      align-content: center;
+      //padding-left: 200px;
+      margin-left:200px;
+  
+    }
+  }
+  
+  
+  

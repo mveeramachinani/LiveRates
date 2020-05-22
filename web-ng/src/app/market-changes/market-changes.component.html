@@ -1,0 +1,111 @@
+<mat-toolbar class="toolbar">
+    <h3>Live Exchange Rates</h3>
+  </mat-toolbar>
+  <br/>
+  <br/>
+  
+  <div class="main-div"  *ngIf='signalRService.data'>
+    <mat-card class="example-card">
+      <mat-card-title>
+        Live Rates
+      </mat-card-title>
+      <mat-card-content>
+        <div fxFlex="100" fxLayout="row wrap" fxLayoutAlign="start center" fxLayoutAlign.gt-xs="start start" fxLayoutGap="20px" class="pb-16">
+  
+          <div fxLayout="column" fxFlex="100">
+            <mat-table fxFlex="100" class="rates-table"
+                       #table [dataSource]="signalRService.data">
+  
+              <!-- Name Column -->
+              <ng-container matColumnDef="Currency">
+                <mat-header-cell *matHeaderCellDef>Currency</mat-header-cell>
+                <mat-cell *matCellDef="let rates">
+                  <p class="text-truncate">{{rates.currency}}</p>
+                </mat-cell>
+      
+              </ng-container>
+  
+              <!-- Description Column -->
+              <ng-container matColumnDef="Rate">
+                <mat-header-cell *matHeaderCellDef>Rate</mat-header-cell>
+                <mat-cell *matCellDef="let rates">
+                  <p class="text-truncate">{{rates.rate}}</p>
+                </mat-cell>
+
+              </ng-container>
+  
+              <!-- Users Column -->
+              <ng-container matColumnDef="Bid">
+                <mat-header-cell *matHeaderCellDef>Bid</mat-header-cell>
+                <mat-cell *matCellDef="let rates">
+                    <p class="text-truncate">{{rates.bid}}</p>
+                </mat-cell>
+   
+              </ng-container>
+                       <!-- Users Column -->
+              <ng-container matColumnDef="Ask">
+                <mat-header-cell *matHeaderCellDef>Ask</mat-header-cell>
+                <mat-cell *matCellDef="let rates">
+                    <p class="text-truncate">{{rates.ask}}</p>
+                </mat-cell>
+
+              </ng-container>
+
+                       <!-- Users Column -->
+              <ng-container matColumnDef="High">
+                <mat-header-cell *matHeaderCellDef>High</mat-header-cell>
+                <mat-cell *matCellDef="let rates">
+                    <p class="text-truncate">{{rates.high}}</p>
+                </mat-cell>
+             
+              </ng-container>
+
+                       <!-- Users Column -->
+              <ng-container matColumnDef="Low">
+                <mat-header-cell *matHeaderCellDef>Low</mat-header-cell>
+                <mat-cell *matCellDef="let rates">
+                    <p class="text-truncate">{{rates.low}}</p>
+                </mat-cell>
+            
+              </ng-container>
+
+                       <!-- Users Column -->
+              <ng-container matColumnDef="Open">
+                <mat-header-cell *matHeaderCellDef>Open</mat-header-cell>
+                <mat-cell *matCellDef="let rates">
+                    <p class="text-truncate">{{rates.open}}</p>
+                </mat-cell>
+       
+              </ng-container>
+
+                       <!-- Users Column -->
+              <ng-container matColumnDef="Close">
+                <mat-header-cell *matHeaderCellDef>Close</mat-header-cell>
+                <mat-cell *matCellDef="let rates">
+                    <p class="text-truncate">{{rates.close}}</p>
+                </mat-cell>
+    
+              </ng-container>
+
+                       <!-- Users Column -->
+              <ng-container matColumnDef="Timestamp">
+                <mat-header-cell *matHeaderCellDef>Timestamp</mat-header-cell>
+                <mat-cell *matCellDef="let rates">
+                    <p class="text-truncate">{{rates.timestamp}}</p>
+                </mat-cell>
+                    </ng-container>
+
+              <mat-header-row *matHeaderRowDef="displayedColumns; sticky:true"></mat-header-row>
+              <mat-row *matRowDef="let rates; columns: displayedColumns;"
+                       class="rates"
+                       matRipple
+                       [routerLink]="">
+              </mat-row>
+  
+            </mat-table>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  
