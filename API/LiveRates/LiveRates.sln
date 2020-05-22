@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29920.165
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiveRates", "LiveRates\LiveRates.csproj", "{53231FBA-51B2-4633-8D56-46CF60717D73}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LiveRates", "LiveRates\LiveRates.csproj", "{53231FBA-51B2-4633-8D56-46CF60717D73}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
