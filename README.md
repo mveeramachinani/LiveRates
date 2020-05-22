@@ -4,12 +4,12 @@ This project serves as a test bed implementation of SignalR and Angular 9, to de
 SignalR was decided upon due to the fact that all web service calls have already been built using .Net Core 3.1 and hubs exposed by SignalR would fit the current architecture perfectly.
 
 # Technologies
-Microsoft .Net Core 3.1
-Google Angular v9
-Microsoft SignalR
-PostgreSQL 11
-Microsoft Entity Framework
-Docker
+* Microsoft .Net Core 3.1
+* Google Angular v9
+* Microsoft SignalR
+* PostgreSQL 11
+* Microsoft Entity Framework
+* Docker
 
 # Getting Started
 
