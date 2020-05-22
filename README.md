@@ -7,8 +7,6 @@ SignalR was decided upon due to the fact that all web service calls have already
 * Microsoft .Net Core 3.1
 * Google Angular v9
 * Microsoft SignalR
-* PostgreSQL 11
-* Microsoft Entity Framework
 * Docker
 
 # Getting Started
