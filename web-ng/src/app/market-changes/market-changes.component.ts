@@ -25,24 +25,6 @@ export class MarketChangesComponent implements OnInit {
    }
 
    ngOnInit() {
-    // this.ratesService.getLiveRates().subscribe((x: LiveRatesDTO[]) => {
-    //   // tslint:disable-next-line:prefer-for-of
-    //   for (let i = 0; i < x.length; i++) {
-    //     const p: LiveRatesDTO = {
-    //       currency: x[i].currency,
-    //       rate: x[i].rate,
-    //       bid: x[i].bid,
-    //       ask: x[i].ask,
-    //       high: x[i].high,
-    //       low: x[i].low,
-    //       open: x[i].open,
-    //       close: x[i].close,
-    //       timestamp: x[i].timestamp
-    //     };
-    //     this.liveRates.push(p);
-    //   }
-    //   this.datasource = new MatTableDataSource<LiveRatesDTO>(this.liveRates);
-    // });
 
     this.signalRService.startConnection();
     this.signalRService.addTransferRatesDataListener();
@@ -52,7 +34,7 @@ export class MarketChangesComponent implements OnInit {
   }
 
   private startHttpRequest = () => {
-    this.http.get('https://localhost:32788/api/rates')
+    this.http.get('https://localhost:8096/api/rates')
       .subscribe((x: LiveRatesDTO[]) => {
         console.log(x);
       });

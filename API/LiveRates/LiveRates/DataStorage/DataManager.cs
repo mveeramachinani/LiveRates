@@ -52,7 +52,7 @@ namespace LiveRates.DataStorage
 
                 }
 
-                throw new NullReferenceException("An error occured while sending an sms.");
+                throw new NullReferenceException("An error occured while getting the live rates.");
             }
         }
 

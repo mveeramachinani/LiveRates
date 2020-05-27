@@ -29,7 +29,7 @@ namespace LiveRates.Models
 
         private decimal? GetValue(string option)
         {
-           return (!string.IsNullOrEmpty(option) && option != "n/a") ? Convert.ToDecimal(option) : (decimal?)null;
+           return (!string.IsNullOrEmpty(option) && !option.Contains("n/a")) ? Convert.ToDecimal(option) : (decimal?)null;
         }
 
     }
